@@ -91,6 +91,9 @@ Add this token as a repository secret named `GH_PUBLISH_TOKEN`.
 
 The GitHub Actions workflow will use this token to authenticate and publish the package. See `.github/workflows/publish.yml` for details.
 
+> **Note:**
+> If you see a warning in VS Code like `Context access might be invalid: GH_PUBLISH_TOKEN` in your workflow YAML, you can safely ignore it. This warning is a static analysis message and does not affect workflow execution as long as the secret is set up in your GitHub repository.
+
 ## Testing
 
 To run tests:
