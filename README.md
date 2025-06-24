@@ -36,6 +36,17 @@ console.log(result); // 0 or 1
 ### `coinFlip()`
 Returns either 0 or 1, simulating a fair coin flip.
 
+## Publishing to GitHub Packages
+
+To publish this package to GitHub Packages, you need a GitHub Personal Access Token (PAT) with the following scopes:
+- `write:packages`
+- `read:packages`
+- `repo`
+
+Add this token as a repository secret named `GH_PUBLISH_TOKEN`.
+
+The GitHub Actions workflow will use this token to authenticate and publish the package. See `.github/workflows/publish.yml` for details.
+
 ## Testing
 
 To run tests:
