@@ -1,0 +1,25 @@
+# Ignore test files
+__tests__/
+
+# Ignore configuration files
+.gitignore
+.npmignore
+.vscode/
+
+# Ignore local npm config
+.npmrc
+
+# Ignore source files
+*.ts
+!dist/
+
+# Ignore logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore coverage
+coverage/
+
+# Ignore Mac system files
+.DS_Store

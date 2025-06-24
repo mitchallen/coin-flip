@@ -1,0 +1,29 @@
+{
+  "name": "@mitchallen/coin-flip",
+  "version": "1.0.0",
+  "description": "A simple coin flip utility that returns 0 or 1.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "coin",
+    "flip",
+    "random",
+    "utility"
+  ],
+  "author": "Mitch Allen",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.0.2",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3"
+  }
+}
