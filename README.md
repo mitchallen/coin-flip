@@ -51,10 +51,10 @@ To install any package from https://npm.pkg.github.com, you must:
 
 ```
 //npm.pkg.github.com/:_authToken=YOUR_PAT
-@mitchallen:registry=https://npm.pkg.github.com/
+@YOUR_GITHUB_USERNAME:registry=https://npm.pkg.github.com/
 ```
 
-Replace `@mitchallen` with the GitHub org or username as needed.
+Replace `@YOUR_GITHUB_USERNAME` with the GitHub org or username as needed.
 
 ## Usage
 
