@@ -22,6 +22,14 @@ Then install:
 npm install @mitchallen/coin-flip
 ```
 
+**Alternative:** You can also specify the registry directly in the install command (useful for CI or one-off installs):
+
+```
+npm install @mitchallen/coin-flip --registry=https://npm.pkg.github.com/
+```
+
+If authentication is required, make sure your environment has the appropriate `NPM_TOKEN` or PAT set up.
+
 ### Why is a PAT required for public packages on GitHub Packages?
 
 A public npm package hosted on GitHub Packages (using `@OWNER/package-name` syntax) still requires a Personal Access Token (PAT) to install — even if it's public — due to how GitHub Packages works.
@@ -43,10 +51,10 @@ To install any package from https://npm.pkg.github.com, you must:
 
 ```
 //npm.pkg.github.com/:_authToken=YOUR_PAT
-@YOUR_GITHUB_USERNAME:registry=https://npm.pkg.github.com/
+@mitchallen:registry=https://npm.pkg.github.com/
 ```
 
-Replace `YOUR_GITHUB_USERNAME` with the GitHub org or username as needed.
+Replace `@mitchallen` with the GitHub org or username as needed.
 
 ## Usage
 
