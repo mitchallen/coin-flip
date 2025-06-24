@@ -31,6 +31,16 @@ const result = coinFlip();
 console.log(result); // 0 or 1
 ```
 
+## Makefile Usage
+
+This project includes a `Makefile` to simplify common development tasks. Run the following commands from the project root:
+
+- `make` or `make help` — Show available make targets and descriptions
+- `make build` — Compile TypeScript to JavaScript (output to `dist/`)
+- `make test` — Run tests with Jest
+- `make clean` — Remove the build output (`dist/`)
+- `make publish` — Switch to the main branch, increment the patch version, and push changes and tags (triggers GitHub Actions publish workflow)
+
 ## API
 
 ### `coinFlip()`
