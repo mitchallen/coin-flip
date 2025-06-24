@@ -22,6 +22,32 @@ Then install:
 npm install @mitchallen/coin-flip
 ```
 
+### Why is a PAT required for public packages on GitHub Packages?
+
+A public npm package hosted on GitHub Packages (using `@OWNER/package-name` syntax) still requires a Personal Access Token (PAT) to install — even if it's public — due to how GitHub Packages works.
+
+**Why This Happens:**
+GitHub Packages (npm registry at https://npm.pkg.github.com) enforces authentication for all package access, regardless of the package's visibility.
+
+- Unlike registry.npmjs.org, GitHub Packages does not support unauthenticated access, even for public packages.
+- This is by design: GitHub's registry enforces authentication to:
+  - Track usage by user/org
+  - Support fine-grained permissions
+  - Enforce rate limiting
+- There is no anonymous access to npm.pkg.github.com.
+
+**What You Need:**
+To install any package from https://npm.pkg.github.com, you must:
+- Use a Personal Access Token (PAT) with at least `read:packages` scope.
+- Configure your `.npmrc` like this:
+
+```
+//npm.pkg.github.com/:_authToken=YOUR_PAT
+@mitchallen:registry=https://npm.pkg.github.com/
+```
+
+Replace `@mitchallen` with the GitHub org or username as needed.
+
 ## Usage
 
 ```typescript
